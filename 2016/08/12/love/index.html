@@ -84,16 +84,22 @@
 
 
 
-<meta name="description" content="飞自山涧留枝头，涓涓细水静静留。梧桐小树慢慢长，峻山谧水伴左右。">
+<meta name="description" content="安装配置依赖项1234sudo yum install curl openssh-server openssh-clients postfix croniesudo service postfix startsudo chkconfig postfix onsudo lokkit -s http -s ssh
+添加GitLab仓库,并安装到服务器上使用清华代理源
+新建 /etc/yum.repos">
 <meta property="og:type" content="article">
-<meta property="og:title" content="love">
+<meta property="og:title" content="gitlab安装">
 <meta property="og:url" content="http://yoursite.com/2016/08/12/love/index.html">
 <meta property="og:site_name" content="梧桐的家">
-<meta property="og:description" content="飞自山涧留枝头，涓涓细水静静留。梧桐小树慢慢长，峻山谧水伴左右。">
-<meta property="og:updated_time" content="2016-08-12T09:41:58.000Z">
+<meta property="og:description" content="安装配置依赖项1234sudo yum install curl openssh-server openssh-clients postfix croniesudo service postfix startsudo chkconfig postfix onsudo lokkit -s http -s ssh
+添加GitLab仓库,并安装到服务器上使用清华代理源
+新建 /etc/yum.repos">
+<meta property="og:updated_time" content="2016-08-14T09:27:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="love">
-<meta name="twitter:description" content="飞自山涧留枝头，涓涓细水静静留。梧桐小树慢慢长，峻山谧水伴左右。">
+<meta name="twitter:title" content="gitlab安装">
+<meta name="twitter:description" content="安装配置依赖项1234sudo yum install curl openssh-server openssh-clients postfix croniesudo service postfix startsudo chkconfig postfix onsudo lokkit -s http -s ssh
+添加GitLab仓库,并安装到服务器上使用清华代理源
+新建 /etc/yum.repos">
 
 
 
@@ -116,7 +122,7 @@
 
   <link rel="canonical" href="http://yoursite.com/2016/08/12/love/"/>
 
-  <title> love | 梧桐的家 </title>
+  <title> gitlab安装 | 梧桐的家 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -226,7 +232,7 @@
             
             
               
-                love
+                gitlab安装
               
             
           </h1>
@@ -266,7 +272,16 @@
       
 
       
-        
+        <h1 id="安装配置依赖项"><a href="#安装配置依赖项" class="headerlink" title="安装配置依赖项"></a>安装配置依赖项</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo yum install curl openssh-server openssh-clients postfix cronie</div><div class="line">sudo service postfix start</div><div class="line">sudo chkconfig postfix on</div><div class="line">sudo lokkit -s http -s ssh</div></pre></td></tr></table></figure>
+<h1 id="添加GitLab仓库-并安装到服务器上"><a href="#添加GitLab仓库-并安装到服务器上" class="headerlink" title="添加GitLab仓库,并安装到服务器上"></a>添加GitLab仓库,并安装到服务器上</h1><p>使用清华代理源</p>
+<p>新建 /etc/yum.repos.d/gitlab-ce.repo</p>
+<p>centos6内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[gitlab-ce]</div><div class="line">name=gitlab-ce</div><div class="line">baseurl=http://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el6</div><div class="line">repo_gpgcheck=0</div><div class="line">gpgcheck=0</div><div class="line">enabled=1</div><div class="line">gpgkey=https://packages.gitlab.com/gpg.key</div></pre></td></tr></table></figure>
+<p>centos7内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[gitlab-ce]</div><div class="line">name=gitlab-ce</div><div class="line">baseurl=http://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7</div><div class="line">repo_gpgcheck=0</div><div class="line">gpgcheck=0</div><div class="line">enabled=1</div><div class="line">gpgkey=https://packages.gitlab.com/gpg.key</div></pre></td></tr></table></figure>
+<p>运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum makecache</div><div class="line">sudo yum install gitlab-ce</div></pre></td></tr></table></figure></p>
+<h1 id="启动GitLab"><a href="#启动GitLab" class="headerlink" title="启动GitLab"></a>启动GitLab</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl reconfigure</div></pre></td></tr></table></figure>
+<h1 id="GitLab-中文文档"><a href="#GitLab-中文文档" class="headerlink" title="GitLab 中文文档"></a><a href="https://doc.gitlab.cc/omnibus/" target="_blank" rel="external">GitLab 中文文档</a></h1>
       
     </div>
 
@@ -287,6 +302,20 @@
     <footer class="post-footer">
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/14/gitcommand/" rel="prev" title="git重要命令">
+                git重要命令 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -351,7 +380,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -383,7 +412,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装配置依赖项"><span class="nav-number">1.</span> <span class="nav-text">安装配置依赖项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加GitLab仓库-并安装到服务器上"><span class="nav-number">2.</span> <span class="nav-text">添加GitLab仓库,并安装到服务器上</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动GitLab"><span class="nav-number">3.</span> <span class="nav-text">启动GitLab</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GitLab-中文文档"><span class="nav-number">4.</span> <span class="nav-text">GitLab 中文文档</span></a></li></ol></div>
             
           </div>
         </section>
