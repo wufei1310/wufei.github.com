@@ -98,7 +98,7 @@
 这里  kill -9 4967杀死进程， 此4967为进程号
 启动SVN1sudo svnserve -d -r /home/data/svn/
 其中">
-<meta property="og:updated_time" content="2016-08-22T09:30:07.000Z">
+<meta property="og:updated_time" content="2016-08-23T01:43:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SVN服务重启">
 <meta name="twitter:description" content="关闭SVN这里采取linux杀死进程的方式处理的 
@@ -329,6 +329,7 @@
 <p>这里  kill -9 4967杀死进程， 此4967为进程号</p>
 <h1 id="启动SVN"><a href="#启动SVN" class="headerlink" title="启动SVN"></a>启动SVN</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo svnserve -d -r /home/data/svn/</div></pre></td></tr></table></figure>
 <p>其中 -d 表示守护进程， -r 表示在后台执行<br>/home/data/svn/  为svn 资源目录 </p>
+<h1 id="创建资源库"><a href="#创建资源库" class="headerlink" title="创建资源库"></a>创建资源库</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir /usr/svn/respo/daifa_member</div><div class="line">svnadmin create /usr/svn/respo/daifa_member</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -511,7 +512,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关闭SVN"><span class="nav-number">1.</span> <span class="nav-text">关闭SVN</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动SVN"><span class="nav-number">2.</span> <span class="nav-text">启动SVN</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关闭SVN"><span class="nav-number">1.</span> <span class="nav-text">关闭SVN</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动SVN"><span class="nav-number">2.</span> <span class="nav-text">启动SVN</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#创建资源库"><span class="nav-number">3.</span> <span class="nav-text">创建资源库</span></a></li></ol></div>
             
           </div>
         </section>

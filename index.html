@@ -323,6 +323,7 @@
 <p>这里  kill -9 4967杀死进程， 此4967为进程号</p>
 <h1 id="启动SVN"><a href="#启动SVN" class="headerlink" title="启动SVN"></a>启动SVN</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo svnserve -d -r /home/data/svn/</div></pre></td></tr></table></figure>
 <p>其中 -d 表示守护进程， -r 表示在后台执行<br>/home/data/svn/  为svn 资源目录 </p>
+<h1 id="创建资源库"><a href="#创建资源库" class="headerlink" title="创建资源库"></a>创建资源库</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir /usr/svn/respo/daifa_member</div><div class="line">svnadmin create /usr/svn/respo/daifa_member</div></pre></td></tr></table></figure>
 
           
         
