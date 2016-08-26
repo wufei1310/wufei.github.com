@@ -317,8 +317,7 @@
 
       
         
-          
-            <h1 id="查看新硬盘"><a href="#查看新硬盘" class="headerlink" title="查看新硬盘"></a>查看新硬盘</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#fdisk –l</div></pre></td></tr></table></figure>
+          <h1 id="查看新硬盘"><a href="#查看新硬盘" class="headerlink" title="查看新硬盘"></a>查看新硬盘</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#fdisk –l</div></pre></td></tr></table></figure>
 <p>新添加的硬盘的编号为/dev/sdb</p>
 <h1 id="挂载硬盘"><a href="#挂载硬盘" class="headerlink" title="挂载硬盘"></a>挂载硬盘</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fdisk /dev/sdb</div></pre></td></tr></table></figure>
 <p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="image"></p>
@@ -328,15 +327,12 @@
 <p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%874.png" alt="image"></p>
 <p>选择”w”开始写入</p>
 <p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%875.png" alt="image"></p>
-<p>对新加入卷sdb1，进行格式化文件格式ext4</p>
-<h1 id="挂载访问路径"><a href="#挂载访问路径" class="headerlink" title="挂载访问路径"></a>挂载访问路径</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mount /dev/sdb1 /home/app/</div></pre></td></tr></table></figure>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%876.png" alt="image"></p>
-<h1 id="设置开机自动挂载"><a href="#设置开机自动挂载" class="headerlink" title="设置开机自动挂载"></a>设置开机自动挂载</h1><p>修改/etc/fstab文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#vi /etc/fstab</div></pre></td></tr></table></figure>
-<p>在文件的最后增加一行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/dev/sdb1 /home/app ext4 defaults 1 2</div></pre></td></tr></table></figure>
-
-          
+<p>对新加入卷sdb1，进行格式化文件格式ext4<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/26/挂载硬盘/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
