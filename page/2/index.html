@@ -248,6 +248,134 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/12/love/" itemprop="url">
+                  gitlab安装
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-12T17:41:58+08:00" content="2016-08-12">
+              2016-08-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/炽热的工作/" itemprop="url" rel="index">
+                    <span itemprop="name">炽热的工作</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/12/love/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/12/love/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="安装配置依赖项"><a href="#安装配置依赖项" class="headerlink" title="安装配置依赖项"></a>安装配置依赖项</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo yum install curl openssh-server openssh-clients postfix cronie</div><div class="line">sudo service postfix start</div><div class="line">sudo chkconfig postfix on</div><div class="line">sudo lokkit -s http -s ssh</div></pre></td></tr></table></figure>
+<h1 id="添加GitLab仓库-并安装到服务器上"><a href="#添加GitLab仓库-并安装到服务器上" class="headerlink" title="添加GitLab仓库,并安装到服务器上"></a>添加GitLab仓库,并安装到服务器上</h1><p>使用清华代理源</p>
+<p>新建 /etc/yum.repos.d/gitlab-ce.repo</p>
+<p>centos6内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[gitlab-ce]</div><div class="line">name=gitlab-ce</div><div class="line">baseurl=http://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el6</div><div class="line">repo_gpgcheck=0</div><div class="line">gpgcheck=0</div><div class="line">enabled=1</div><div class="line">gpgkey=https://packages.gitlab.com/gpg.key</div></pre></td></tr></table></figure>
+<p>centos7内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[gitlab-ce]</div><div class="line">name=gitlab-ce</div><div class="line">baseurl=http://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7</div><div class="line">repo_gpgcheck=0</div><div class="line">gpgcheck=0</div><div class="line">enabled=1</div><div class="line">gpgkey=https://packages.gitlab.com/gpg.key</div></pre></td></tr></table></figure>
+<p>运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum makecache</div><div class="line">sudo yum install gitlab-ce</div></pre></td></tr></table></figure></p>
+<h1 id="启动GitLab"><a href="#启动GitLab" class="headerlink" title="启动GitLab"></a>启动GitLab</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl reconfigure</div></pre></td></tr></table></figure>
+<h1 id="GitLab-中文文档"><a href="#GitLab-中文文档" class="headerlink" title="GitLab 中文文档"></a><a href="https://doc.gitlab.cc/omnibus/" target="_blank" rel="external">GitLab 中文文档</a></h1>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2011/08/09/dream4/" itemprop="url">
                   不过是个梦4
                 </a>
@@ -744,138 +872,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2009/09/30/dream1/" itemprop="url">
-                  不过是个梦1
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2009-09-30T21:38:54+08:00" content="2009-09-30">
-              2009-09-30
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/热爱的生活/" itemprop="url" rel="index">
-                    <span itemprop="name">热爱的生活</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2009/09/30/dream1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2009/09/30/dream1/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>小飞走在悠长的巷子里，青苔藓的大石板和溜滑的墙面。前方有支微弱的路灯，在天微暗时候亮了，却在天彻底黑暗时闭了。</p>
-<p>不知道这里还有多久才走得出去，一些冷风灌进脖子，小飞束束衣领。其实他不知道为什么会在这里，没有人告诉他也没有他的意愿，仿佛前一刻他还在和朋友对弈着象棋，才刚沏上杯茶水。耳畔的风声，像咒怨的幽灵，空洞的双眼，张舞的大口。</p>
-<p>有天晚上下班的有些迟，路上也是静谥悄悄，两旁的大排档大多都各自打洋，剩下不多的还在张罗一天最后的生意。油锅里滋滋声在此时格外刺耳，每一下厨师将锅帅气的翻滚似乎都让小飞听着婴儿的啼哭，咽咽咽咽地！</p>
-<p>小飞想：大概太累了，快点回家睡觉喽！</p>
-<p>张大娘的油条铺，没想到此时还在炸油条，可搁到明早就都不脆了！</p>
-<p>“大娘，怎么这么晚还在做油条啊？”</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2009/09/30/dream1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -916,7 +917,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
