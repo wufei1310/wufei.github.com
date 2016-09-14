@@ -84,15 +84,22 @@
 
 
 
-<meta name="description" content="飞自山涧留枝头，涓涓细水静静留。梧桐小树慢慢长，峻山谧水伴左右。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="梧桐的家">
-<meta property="og:url" content="http://wuyujuan.com/index.html">
+<meta name="description" content="查看是否已有安装1rpm -qa | grep mysql　　// 这个命令就会查看该操作系统上是否已经安装了mysql数据库
+通过这个命令查看该系统中是否已经安装了mysql，可以看到我的系统比较干净，没有安装任何版本的mysql,如果你系统有安装，那可以选择进行卸载
+12[root@liang ~]# rpm -e mysql　　// 普通删除模式[root@liang ~]# rpm -e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装mysql">
+<meta property="og:url" content="http://wuyujuan.com/2016/09/14/安装mysql/index.html">
 <meta property="og:site_name" content="梧桐的家">
-<meta property="og:description" content="飞自山涧留枝头，涓涓细水静静留。梧桐小树慢慢长，峻山谧水伴左右。">
+<meta property="og:description" content="查看是否已有安装1rpm -qa | grep mysql　　// 这个命令就会查看该操作系统上是否已经安装了mysql数据库
+通过这个命令查看该系统中是否已经安装了mysql，可以看到我的系统比较干净，没有安装任何版本的mysql,如果你系统有安装，那可以选择进行卸载
+12[root@liang ~]# rpm -e mysql　　// 普通删除模式[root@liang ~]# rpm -e">
+<meta property="og:updated_time" content="2016-09-14T15:16:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="梧桐的家">
-<meta name="twitter:description" content="飞自山涧留枝头，涓涓细水静静留。梧桐小树慢慢长，峻山谧水伴左右。">
+<meta name="twitter:title" content="安装mysql">
+<meta name="twitter:description" content="查看是否已有安装1rpm -qa | grep mysql　　// 这个命令就会查看该操作系统上是否已经安装了mysql数据库
+通过这个命令查看该系统中是否已经安装了mysql，可以看到我的系统比较干净，没有安装任何版本的mysql,如果你系统有安装，那可以选择进行卸载
+12[root@liang ~]# rpm -e mysql　　// 普通删除模式[root@liang ~]# rpm -e">
 
 
 
@@ -113,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="http://wuyujuan.com/"/>
+  <link rel="canonical" href="http://wuyujuan.com/2016/09/14/安装mysql/"/>
 
-  <title> 梧桐的家 </title>
+  <title> 安装mysql | 梧桐的家 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -146,9 +153,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -225,9 +230,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -247,10 +252,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/09/14/安装mysql/" itemprop="url">
-                  安装mysql
-                </a>
+                安装mysql
               
             
           </h1>
@@ -305,6 +307,11 @@
           
 
           
+              &nbsp; | &nbsp;
+              <span class="page-pv">这篇文章已经被看了
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次，还不错吧？？
+              </span>
+          
         </div>
       </header>
     
@@ -316,9 +323,7 @@
       
 
       
-        
-          
-            <h1 id="查看是否已有安装"><a href="#查看是否已有安装" class="headerlink" title="查看是否已有安装"></a>查看是否已有安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -qa | grep mysql　　// 这个命令就会查看该操作系统上是否已经安装了mysql数据库</div></pre></td></tr></table></figure>
+        <h1 id="查看是否已有安装"><a href="#查看是否已有安装" class="headerlink" title="查看是否已有安装"></a>查看是否已有安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -qa | grep mysql　　// 这个命令就会查看该操作系统上是否已经安装了mysql数据库</div></pre></td></tr></table></figure>
 <p>通过这个命令查看该系统中是否已经安装了mysql，可以看到我的系统比较干净，没有安装任何版本的mysql,如果你系统有安装，那可以选择进行卸载</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@liang ~]# rpm -e mysql　　// 普通删除模式</div><div class="line">[root@liang ~]# rpm -e --nodeps mysql　　// 强力删除模式，如果使用上面命令删除时，提示有依赖的其它文件，则用该命令可以对其进行强力删除</div></pre></td></tr></table></figure>
 <h1 id="使用yum命令进行mysql的安装"><a href="#使用yum命令进行mysql的安装" class="headerlink" title="使用yum命令进行mysql的安装"></a>使用yum命令进行mysql的安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum list | grep mysql //我们通过命令可以查看yum上提供下载的mysql的版本信息</div></pre></td></tr></table></figure>
@@ -337,16 +342,41 @@
 <p>重启mysqld成功！</p>
 <h1 id="修改数据存储目录"><a href="#修改数据存储目录" class="headerlink" title="修改数据存储目录"></a>修改数据存储目录</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cp -R /var/lib/mysql/* .</div><div class="line">chown mysql -R data/</div><div class="line">datadir=/mnt/mysqldisk/data //修改my.cnf</div></pre></td></tr></table></figure>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>走过的路过的看过的，给点吧！您的支持将鼓励我继续写！写！写！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://7xt4qe.com1.z0.glb.clouddn.com/wx.png" alt="吴飞 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://7xt4qe.com1.z0.glb.clouddn.com/alipay.png" alt="吴飞 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
     </div>
+  </div>
 
-    <div>
+
       
     </div>
 
@@ -354,526 +384,51 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/09/11/挑战/" rel="next" title="儿子替我挑战了">
+                <i class="fa fa-chevron-left"></i> 儿子替我挑战了
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/09/11/挑战/" itemprop="url">
-                  儿子替我挑战了
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-11T11:04:35+08:00" content="2016-09-11">
-              2016-09-11
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/热爱的生活/" itemprop="url" rel="index">
-                    <span itemprop="name">热爱的生活</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/11/挑战/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/11/挑战/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <iframe height="498" width="510" src="http://player.youku.com/embed/XMTcyMDY1NzY1Mg==" frameborder="0" 'allowfullscreen'=""></iframe>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/05/听老板的话/" itemprop="url">
-                  听老板的话
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-05T19:56:24+08:00" content="2016-09-05">
-              2016-09-05
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/炽热的工作/" itemprop="url" rel="index">
-                    <span itemprop="name">炽热的工作</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/09/05/听老板的话/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/05/听老板的话/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>经过一年半的时间，美络已经实现安徽省全省公车管理一张网，并正在构建服务一张网体系，到现在为止，安徽省还没有一家信息化的公司实现这个目标，包括科大讯飞；半年不到的时间，中科美络已经进入全国六个省份，预计到年底，至少将进入十个省份，到目前为止，全国能够真正进入五个以上省份的信息化企业屈指可数。在安徽，中科美络将在现有的市场基础上精耕细作，逐步深入公务用车各个应用领域，全省公务用车的行业垄断；在全国，我们将不断复制安徽的成功经验，最终目标是做成 北斗公务用车平台的全国第一。</p>
-<p>希望大家不能站在今天各自现在的岗位来看自己，而是要以发展的眼光来看一年后、三年后、五年后美络对你们的要求。现在各位是兵，未来希望是将；现在是将，未来希望是帅；现在是帅，未来希望是美络重要业务板块的CEO。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/31/mysql数据库故障/" itemprop="url">
-                  mysql数据库故障
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-31T11:50:09+08:00" content="2016-08-31">
-              2016-08-31
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/炽热的工作/" itemprop="url" rel="index">
-                    <span itemprop="name">炽热的工作</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/31/mysql数据库故障/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/31/mysql数据库故障/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="is-marked-as-crashed-and-should-be-repaired"><a href="#is-marked-as-crashed-and-should-be-repaired" class="headerlink" title="is marked as crashed and should be repaired"></a>is marked as crashed and should be repaired</h1><p>错误产生原因，有网友说是频繁查询和更新表造成的索引错误。</p>
-<p>还有说法为是MYSQL数据库因为某种原因而受到了损坏，如：数据库服务器突发性的断电、在提在数据库表提供服务时对表的原文件进行某种操作都有可能导致MYSQL数据库表被损坏而无法读取数据。</p>
-<p>总之就是因为某些不可测的问题造成表的损坏。</p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/1.png" alt="image"></p>
-<p>下面讲的方法只对MyISAM格式的表有效:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">REPAIR TABLE statement(mysql服务必须处于运行状态)。</div><div class="line">mysqlcheck(mysql服务可以处于运行状态)。</div><div class="line">myisamchk(必须停掉mysql服务,或者所操作的表处于不活动状态)。</div></pre></td></tr></table></figure>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/2.png" alt="image"></p>
-<p>由于先执行的上面这步修复，发现系统还是出错。仔细分析，原来myisamchk需要必停掉服务运行。于是，再尝试执行下面的命令，修复成功！</p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/3.png" alt="image"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/26/挂载硬盘/" itemprop="url">
-                  挂载硬盘
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-26T12:20:08+08:00" content="2016-08-26">
-              2016-08-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/炽热的工作/" itemprop="url" rel="index">
-                    <span itemprop="name">炽热的工作</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/26/挂载硬盘/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/26/挂载硬盘/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="查看新硬盘"><a href="#查看新硬盘" class="headerlink" title="查看新硬盘"></a>查看新硬盘</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#fdisk –l</div></pre></td></tr></table></figure>
-<p>新添加的硬盘的编号为/dev/sdb</p>
-<h1 id="挂载硬盘"><a href="#挂载硬盘" class="headerlink" title="挂载硬盘"></a>挂载硬盘</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fdisk /dev/sdb</div></pre></td></tr></table></figure>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="image"></p>
-<p>选择”n”添加一个新卷</p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%872.png" alt="image"></p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%873.png" alt="image"></p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%874.png" alt="image"></p>
-<p>选择”w”开始写入</p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%875.png" alt="image"></p>
-<p>对新加入卷sdb1，进行格式化文件格式ext4<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/26/挂载硬盘/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/09/14/安装mysql/"
+     data-title="安装mysql"
+     data-content=""
+     data-url="http://wuyujuan.com/2016/09/14/安装mysql/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
 
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -881,6 +436,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/14/安装mysql/"
+           data-title="安装mysql" data-url="http://wuyujuan.com/2016/09/14/安装mysql/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -900,8 +463,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars3.githubusercontent.com/u/1592388?v=3&s=460"
@@ -966,6 +538,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#查看是否已有安装"><span class="nav-number">1.</span> <span class="nav-text">查看是否已有安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用yum命令进行mysql的安装"><span class="nav-number">2.</span> <span class="nav-text">使用yum命令进行mysql的安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优化mysql配置"><span class="nav-number">3.</span> <span class="nav-text">优化mysql配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改数据存储目录"><span class="nav-number">4.</span> <span class="nav-text">修改数据存储目录</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -1078,6 +661,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

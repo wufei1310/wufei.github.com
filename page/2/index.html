@@ -248,6 +248,131 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/22/SVN服务重启/" itemprop="url">
+                  SVN服务重启
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-22T16:54:30+08:00" content="2016-08-22">
+              2016-08-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/炽热的工作/" itemprop="url" rel="index">
+                    <span itemprop="name">炽热的工作</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/22/SVN服务重启/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/22/SVN服务重启/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="关闭SVN"><a href="#关闭SVN" class="headerlink" title="关闭SVN"></a>关闭SVN</h1><p>这里采取linux杀死进程的方式处理的 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps -ef|grep svnserve </div><div class="line">root      4967     1  0 Aug23 ?        00:00:00 svnserve -d -r repository/</div></pre></td></tr></table></figure>
+<p>这里  kill -9 4967杀死进程， 此4967为进程号</p>
+<h1 id="启动SVN"><a href="#启动SVN" class="headerlink" title="启动SVN"></a>启动SVN</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo svnserve -d -r /home/data/svn/</div></pre></td></tr></table></figure>
+<p>其中 -d 表示守护进程， -r 表示在后台执行<br>/home/data/svn/  为svn 资源目录 </p>
+<h1 id="创建资源库"><a href="#创建资源库" class="headerlink" title="创建资源库"></a>创建资源库</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir /usr/svn/respo/daifa_member</div><div class="line">svnadmin create /usr/svn/respo/daifa_member</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/16/回家/" itemprop="url">
                   回家
                 </a>
@@ -767,132 +892,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2011/04/19/dream3/" itemprop="url">
-                  不过是个梦3
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2011-04-19T00:44:15+08:00" content="2011-04-19">
-              2011-04-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/热爱的生活/" itemprop="url" rel="index">
-                    <span itemprop="name">热爱的生活</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2011/04/19/dream3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2011/04/19/dream3/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>昨晚睡觉时差不多有一点，终于将枕边的这本书看完了，结局很平静，但又不像结局。所以在对待小说或者电视剧之类，渐渐我不喜欢看结局，虽说意犹未尽，但终觉得所有定下了的结局就本是为了写好一个结局，也就不再像真实世界里让我们如此兴奋的是永远不知道下一秒会发生什么。 </p>
-<p>不知不觉，又到十二点了，为了赶个文档，穷尽几番脑汁。3G好慢，邮件发送的好慢。</p>
-<p>梦，是不是无边无际。突然没缘由的，带领你到一个场景，你觉得熟悉，却叫不出每一个事物。你觉得陌生，却身临其境。</p>
-<p>上周做了一个梦，梦不一定能解释成什么，而现在想来也都是些支离破碎的残影，但愿下面我能掺杂些逻辑将它描述的清楚。</p>
-<p>时代好像是古代时候，男人也都还盘着发髻。有一衣青衫的男子，听上去人们都叫他秀才。秀才每日只知道诵读书经，为得是一朝赶考，称得人臣。赶考的路途是遥远的，在途中秀才就要花去半年的时间。于是，年复一年，从小时候人人称才，至考到了四十不惑，屡次不第。这一年，四十一的秀才再次出行。但没有二十年前的意气风发，也没有十年前的成竹在胸，这时候的秀才已有两鬓斑白，略显龙钟。又路过了这棵槐树，秀才依靠着它歇息。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2011/04/19/dream3/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -938,7 +937,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">14</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
