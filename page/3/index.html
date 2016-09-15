@@ -248,6 +248,269 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/12/love/" itemprop="url">
+                  gitlab安装
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-12T17:41:58+08:00" content="2016-08-12">
+              2016-08-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/炽热的工作/" itemprop="url" rel="index">
+                    <span itemprop="name">炽热的工作</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/12/love/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/12/love/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="安装配置依赖项"><a href="#安装配置依赖项" class="headerlink" title="安装配置依赖项"></a>安装配置依赖项</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sudo yum install curl openssh-server openssh-clients postfix cronie</div><div class="line">sudo service postfix start</div><div class="line">sudo chkconfig postfix on</div><div class="line">sudo lokkit -s http -s ssh</div></pre></td></tr></table></figure>
+<h1 id="添加GitLab仓库-并安装到服务器上"><a href="#添加GitLab仓库-并安装到服务器上" class="headerlink" title="添加GitLab仓库,并安装到服务器上"></a>添加GitLab仓库,并安装到服务器上</h1><p>使用清华代理源</p>
+<p>新建 /etc/yum.repos.d/gitlab-ce.repo</p>
+<p>centos6内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[gitlab-ce]</div><div class="line">name=gitlab-ce</div><div class="line">baseurl=http://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el6</div><div class="line">repo_gpgcheck=0</div><div class="line">gpgcheck=0</div><div class="line">enabled=1</div><div class="line">gpgkey=https://packages.gitlab.com/gpg.key</div></pre></td></tr></table></figure>
+<p>centos7内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">[gitlab-ce]</div><div class="line">name=gitlab-ce</div><div class="line">baseurl=http://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7</div><div class="line">repo_gpgcheck=0</div><div class="line">gpgcheck=0</div><div class="line">enabled=1</div><div class="line">gpgkey=https://packages.gitlab.com/gpg.key</div></pre></td></tr></table></figure>
+<p>运行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo yum makecache</div><div class="line">sudo yum install gitlab-ce</div></pre></td></tr></table></figure></p>
+<h1 id="启动GitLab"><a href="#启动GitLab" class="headerlink" title="启动GitLab"></a>启动GitLab</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gitlab-ctl reconfigure</div></pre></td></tr></table></figure>
+<h1 id="GitLab-中文文档"><a href="#GitLab-中文文档" class="headerlink" title="GitLab 中文文档"></a><a href="https://doc.gitlab.cc/omnibus/" target="_blank" rel="external">GitLab 中文文档</a></h1>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2011/08/09/dream4/" itemprop="url">
+                  不过是个梦4
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2011-08-09T11:42:22+08:00" content="2011-08-09">
+              2011-08-09
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/热爱的生活/" itemprop="url" rel="index">
+                    <span itemprop="name">热爱的生活</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2011/08/09/dream4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2011/08/09/dream4/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>博士：“你想好了？”</p>
+<p>小飞：“是的”</p>
+<p>一面半透明的墙体上，各式各样的操作按钮和不断翻滚刷新的数据，还有各种刺耳的警报声，像是在催促着什么。</p>
+<p>博士撑出手掌，按下中间最大的按钮，随之警报声音改为倒计时：ten,night,seven…</p>
+<p>　　　　</p>
+<p>被电流击中一样，小飞脑中一阵空白，再睁开眼时在一片斑驳昏暗的空间。小飞知道，这说明他的ID已验证通过，因为大拇指的焦灼感。</p>
+<p>勇敢者的游戏，这是后互联网时代一款让人血脉喷张的游戏。在这里你可以欺诈，可以掠夺，可以杀戮，可以嗜血，当然你也可以虔诚，可以善良，可以正义，可以勇敢。而游戏最大的突破在于通过无线终端设备，发射原子磁场，穿透人体并回路连接体内神经元和神经末梢。直接来说，就是所有的感观都会真实的感知。</p>
+<p>游戏正处内测阶段，博士和小飞都知道这意味着什么，当游戏中的感观刺激开始影响现实身体，若未即时正常断开或者退出游戏，那么对现实身体的伤害将是灾难的。</p>
+<p>话回游戏，这次的游戏场景是在一个中世纪教堂，随着鼠疫的施虐，人类如蝼蚁般消亡，各种獠牙的异鬼和邪恶的女巫再次笼罩。而这次的任务是在教堂内找到一张卷轴，并带着它去见德拉库拉伯爵。</p>
+<p>游戏开始，巴啦巴啦巴啦，像很多恐怖游戏与电影一样，一阵让人反胃的杀戮与血浆，勇猛的小飞左手持巨斧，右手拿大剑。虽然这种场景的背景音乐总是有些低沉，诡异，听多了会有些无聊。反正小飞最后就莫名其妙的拿到了卷轴（我的梦我做主，嘿嘿！）。好，接下来去见德拉库拉伯爵。这是哪位大神呢，小飞也不知道，就是听着耳熟。</p>
+<p>在教堂的后院里，一位大叔坐在花园中央。莫非他就是要找的人？</p>
+<p>“陈尸沙漠之人/你我经常看见/你的灵魂未入土为安/你的灵魂没有人挂念/你我经常看见/杯中残酒，席之残羹/弃之于街，聊以果腹”</p>
+<p>虽然不懂他念的什么，但看见小飞手中的卷轴眼神立刻变得犀利。</p>
+<p>“将契约给我”大叔低沉着说</p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2011/08/09/dream4/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2011/04/19/dream3/" itemprop="url">
                   不过是个梦3
                 </a>
@@ -609,156 +872,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2009/09/30/dream1/" itemprop="url">
-                  不过是个梦1
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2009-09-30T21:38:54+08:00" content="2009-09-30">
-              2009-09-30
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/热爱的生活/" itemprop="url" rel="index">
-                    <span itemprop="name">热爱的生活</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2009/09/30/dream1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2009/09/30/dream1/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>小飞走在悠长的巷子里，青苔藓的大石板和溜滑的墙面。前方有支微弱的路灯，在天微暗时候亮了，却在天彻底黑暗时闭了。</p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/14932056322956327544.jpg" alt="image"></p>
-<p>不知道这里还有多久才走得出去，一些冷风灌进脖子，小飞束束衣领。其实他不知道为什么会在这里，没有人告诉他也没有他的意愿，仿佛前一刻他还在和朋友对弈着象棋，才刚沏上杯茶水。耳畔的风声，像咒怨的幽灵，空洞的双眼，张舞的大口。</p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/63965358_1.jpg" alt="image"></p>
-<p>有天晚上下班的有些迟，路上也是静谥悄悄，两旁的大排档大多都各自打洋，剩下不多的还在张罗一天最后的生意。油锅里滋滋声在此时格外刺耳，每一下厨师将锅帅气的翻滚似乎都让小飞听着婴儿的啼哭，咽咽咽咽地！</p>
-<p>小飞想：大概太累了，快点回家睡觉喽！</p>
-<p>张大娘的油条铺，没想到此时还在炸油条，可搁到明早就都不脆了！</p>
-<p>“大娘，怎么这么晚还在做油条啊？”</p>
-<p>她只是接着翻弄手中的长筷子，踩着风箱，没有理会小飞。小飞本有些饿了，可见大娘并不招见，也就只好走过，想着家里还有公司发的月饼。有些不解的是大娘的案板上并没有面粉！</p>
-<p>走过几步，身后又传来一次啼声，然后大娘喃喃几句，似乎像是在哄孩子：“乖啊乖啊”</p>
-<p>蜀南烤鱼城，这名字听起来牛X，其实就只是一个烧烤铺子，秃了头的老板正在吃力地烤着手中肉块。里面有四位客人，黑衣，不语。开了很多啤酒，却都各自放着，满满的。</p>
-<p>其实从北京回来后，小飞就没再吃过这东西，大概是真的不干净吧，睡着觉就还觉得有东西在肚里蠕动。终于挣不住，四点半，在卫生间大呕。并且道听了一些关于这种食品的传闻，有得说是老鼠肉泡尿做的羊骚，还有得说其实是掺着人肉才觉得异常美味。</p>
-<p>烤鱼城老板似乎今天对自己的技艺并不自信，几次差点将手中的肉块掉进炭火堆里，那肉块却也不变色儿，还是腥红腥红，渗着红色粘稠液体，虽然吱吱作响。而平常打下手的伙计，一动也不动地站在一旁，像个纸人，只是眼珠瞪得老大。</p>
-<p>蜀南庭院在蜀山脚下，从当地原住民征收了地开发的，并给征收户分配房子做征地补尝。小飞住82幢401室，正要掏钥匙开门，朝右一瞥发现隔壁门上的耶稣不在了。而门也不能扭开。</p>
-<p>“唉，又走错了”</p>
-<p>下得楼来，左顾右旁一下，小飞再上隔壁四楼。</p>
-<p>“奇怪了，耶稣呢？”隔壁门上还是没有耶稣。</p>
-<p>刚要塞钥匙时，门里一阵婴儿叫声，却只像从门镜里传出，尽入了小飞耳中。踉跄倒退了几步，一头载进楼道处摆放的一个大柜子。风声却起，柜门关上，一遍漆黑。这才意识到，楼里多出了这么个大物件。这不是我住的楼，这是哪里？惊声尖叫，慢慢没入黑夜中，没人查觉，除了耳边环绕的婴儿笑声。</p>
-<p>“嘘，原来是个梦！”小飞睁开眼，一些微弱的月光洒在海蓝的窗帘上。他想，也许刚刚有魔法学院的小精灵，巫师们骑着拖把从窗前飞过！</p>
-<p>侧身拿起桌上的手机，四点半，他就知道！</p>
-<p>天快亮了，再睡会儿！</p>
-<p>辙过身来，压好被子！</p>
-<p>乌云飘来，遮住月光，房间又黑了下来。夜灯昨天晚上坏了，开始还能呼闪，但那呼闪很是渗人，叫小飞直接扔掉。刚辙过身，却拽不过被子！被子似乎在床侧被什么卡住了。他努力地再使了几次力道但没有拉上。就要俯身去看，一个东西像猫样窜上来，猛烈地透过被子往小飞身上冲撞。他想喊，却喊不出；想挣脱，手脚却被扣得死死。那东西看不清它的脸，它的身躯，就作一团。</p>
-<p>“嘘，原来是个梦！”小飞睁开眼，一些微弱的月光洒在海蓝的窗帘上。惊魂未定，而且记起了那个吃小孩的老巫婆，那是很小时候。</p>
-<p>侧身拿起桌上的手机，四点半，他一直知道！</p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/144691389688301950.GIF" alt="image"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -799,7 +917,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

@@ -84,22 +84,22 @@
 
 
 
-<meta name="description" content="查看是否已有安装1rpm -qa | grep mysql　　// 这个命令就会查看该操作系统上是否已经安装了mysql数据库
-通过这个命令查看该系统中是否已经安装了mysql，可以看到我的系统比较干净，没有安装任何版本的mysql,如果你系统有安装，那可以选择进行卸载
-12[root@liang ~]# rpm -e mysql　　// 普通删除模式[root@liang ~]# rpm -e">
+<meta name="description" content="卸载自带OpenJDK1234jdk rpm -qa | grep javajdk yum -y remove java //删除原装jdk yum -y remove java-1.7.0* //删除原装jdk yum -y remove tzdata-java-2012* //删除原装
+安装JDK1.71https://yunpan.cn/cFesUTHRD9qJF  访问密码 fdaa
+1r">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安装mysql">
-<meta property="og:url" content="http://wuyujuan.com/2016/09/14/安装mysql/index.html">
+<meta property="og:title" content="centos6.5安装JAVA">
+<meta property="og:url" content="http://wuyujuan.com/2016/09/15/centos6-5安装JAVA/index.html">
 <meta property="og:site_name" content="梧桐的家">
-<meta property="og:description" content="查看是否已有安装1rpm -qa | grep mysql　　// 这个命令就会查看该操作系统上是否已经安装了mysql数据库
-通过这个命令查看该系统中是否已经安装了mysql，可以看到我的系统比较干净，没有安装任何版本的mysql,如果你系统有安装，那可以选择进行卸载
-12[root@liang ~]# rpm -e mysql　　// 普通删除模式[root@liang ~]# rpm -e">
-<meta property="og:updated_time" content="2016-09-14T15:16:56.000Z">
+<meta property="og:description" content="卸载自带OpenJDK1234jdk rpm -qa | grep javajdk yum -y remove java //删除原装jdk yum -y remove java-1.7.0* //删除原装jdk yum -y remove tzdata-java-2012* //删除原装
+安装JDK1.71https://yunpan.cn/cFesUTHRD9qJF  访问密码 fdaa
+1r">
+<meta property="og:updated_time" content="2016-09-15T02:34:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安装mysql">
-<meta name="twitter:description" content="查看是否已有安装1rpm -qa | grep mysql　　// 这个命令就会查看该操作系统上是否已经安装了mysql数据库
-通过这个命令查看该系统中是否已经安装了mysql，可以看到我的系统比较干净，没有安装任何版本的mysql,如果你系统有安装，那可以选择进行卸载
-12[root@liang ~]# rpm -e mysql　　// 普通删除模式[root@liang ~]# rpm -e">
+<meta name="twitter:title" content="centos6.5安装JAVA">
+<meta name="twitter:description" content="卸载自带OpenJDK1234jdk rpm -qa | grep javajdk yum -y remove java //删除原装jdk yum -y remove java-1.7.0* //删除原装jdk yum -y remove tzdata-java-2012* //删除原装
+安装JDK1.71https://yunpan.cn/cFesUTHRD9qJF  访问密码 fdaa
+1r">
 
 
 
@@ -120,9 +120,9 @@
 
 
 
-  <link rel="canonical" href="http://wuyujuan.com/2016/09/14/安装mysql/"/>
+  <link rel="canonical" href="http://wuyujuan.com/2016/09/15/centos6-5安装JAVA/"/>
 
-  <title> 安装mysql | 梧桐的家 </title>
+  <title> centos6.5安装JAVA | 梧桐的家 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +252,7 @@
             
             
               
-                安装mysql
+                centos6.5安装JAVA
               
             
           </h1>
@@ -264,8 +264,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-14T23:16:11+08:00" content="2016-09-14">
-              2016-09-14
+            <time itemprop="dateCreated" datetime="2016-09-15T10:33:40+08:00" content="2016-09-15">
+              2016-09-15
             </time>
           </span>
 
@@ -294,8 +294,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/14/安装mysql/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/14/安装mysql/" itemprop="commentsCount"></span>
+                <a href="/2016/09/15/centos6-5安装JAVA/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/15/centos6-5安装JAVA/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -323,24 +323,22 @@
       
 
       
-        <h1 id="查看是否已有安装"><a href="#查看是否已有安装" class="headerlink" title="查看是否已有安装"></a>查看是否已有安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -qa | grep mysql　　// 这个命令就会查看该操作系统上是否已经安装了mysql数据库</div></pre></td></tr></table></figure>
-<p>通过这个命令查看该系统中是否已经安装了mysql，可以看到我的系统比较干净，没有安装任何版本的mysql,如果你系统有安装，那可以选择进行卸载</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@liang ~]# rpm -e mysql　　// 普通删除模式</div><div class="line">[root@liang ~]# rpm -e --nodeps mysql　　// 强力删除模式，如果使用上面命令删除时，提示有依赖的其它文件，则用该命令可以对其进行强力删除</div></pre></td></tr></table></figure>
-<h1 id="使用yum命令进行mysql的安装"><a href="#使用yum命令进行mysql的安装" class="headerlink" title="使用yum命令进行mysql的安装"></a>使用yum命令进行mysql的安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum list | grep mysql //我们通过命令可以查看yum上提供下载的mysql的版本信息</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install -y mysql-server mysql mysql-deve //然后通过下面的命令进行数据库的安装</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -qi mysql-server //通过以下命令可以查看已安装数据库的版本信息</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service mysqld start //启动</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chkconfig mysqld on //开机启动</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/bin/mysqladmin -u root password &apos;new-password&apos; //设置root密码</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p //登录</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;*****&apos; WITH GRANT OPTION;</div><div class="line">FLUSH PRIVILEGES; //使root账号可以远程登录</div></pre></td></tr></table></figure>
-<h1 id="优化mysql配置"><a href="#优化mysql配置" class="headerlink" title="优化mysql配置"></a>优化mysql配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">[mysqld]</div><div class="line">datadir=/var/lib/mysql</div><div class="line">socket=/var/lib/mysql/mysql.sock</div><div class="line">user=mysql</div><div class="line"># Disabling symbolic-links is recommended to prevent assorted security risks</div><div class="line">symbolic-links=0</div><div class="line"></div><div class="line"></div><div class="line">innodb_buffer_pool_size=6G</div><div class="line">max_connections=1024</div><div class="line">table_open_cache=128</div><div class="line">max_allowed_packet=4M</div><div class="line">query_cache_size=8M</div><div class="line">slow_query_log=1</div><div class="line">long_query_time=1</div><div class="line">slow_query_log_file=/mnt/mysqldisk/logs/mysql-slow.log</div><div class="line">default-storage-engine=InnoDB</div><div class="line"></div><div class="line">[mysqld_safe]</div><div class="line">log-error=/mnt/mysqldisk/logs/mysqld.log</div><div class="line">pid-file=/var/run/mysqld/mysqld.pid</div></pre></td></tr></table></figure>
-<p>重启mysqld服务，正常启动，但查看日志有一条错误信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">160914 22:55:39 [ERROR] Could not use /mnt/mysqldisk/logs/mysql-slow.log for logging (error 13). Turning logging off for the whole duration o</div><div class="line">f the MySQL server process. To turn it on again: fix the cause, shutdown the MySQL server and restart it.</div></pre></td></tr></table></figure>
-<p>mysql账户无此文件操作权限所导致</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">touch mysql-slow.log</div><div class="line">chown mysql mysql-slow.log</div></pre></td></tr></table></figure>
-<p>重启mysqld成功！</p>
-<h1 id="修改数据存储目录"><a href="#修改数据存储目录" class="headerlink" title="修改数据存储目录"></a>修改数据存储目录</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cp -R /var/lib/mysql/* .</div><div class="line">chown mysql -R data/</div><div class="line">datadir=/mnt/mysqldisk/data //修改my.cnf</div></pre></td></tr></table></figure>
+        <h1 id="卸载自带OpenJDK"><a href="#卸载自带OpenJDK" class="headerlink" title="卸载自带OpenJDK"></a>卸载自带OpenJDK</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">jdk rpm -qa | grep java</div><div class="line">jdk yum -y remove java //删除原装</div><div class="line">jdk yum -y remove java-1.7.0* //删除原装</div><div class="line">jdk yum -y remove tzdata-java-2012* //删除原装</div></pre></td></tr></table></figure>
+<h1 id="安装JDK1-7"><a href="#安装JDK1-7" class="headerlink" title="安装JDK1.7"></a>安装JDK1.7</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://yunpan.cn/cFesUTHRD9qJF  访问密码 fdaa</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -ivh jdk-7u79-linux-x64.rpm</div></pre></td></tr></table></figure>
+<p>此时使用命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -version</div></pre></td></tr></table></figure>
+<p>已经可以看到JDK正常安装了，但最好还是加入到环境变量中，以便对此有依赖的组件可以更安全的找到JAVA环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/profile</div></pre></td></tr></table></figure>
+<p>在文件末加入以下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">JAVA_HOME=/usr/java/jdk1.7.0_79</div><div class="line">PATH=$JAVA_HOME/bin:$PATH</div><div class="line">CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</div><div class="line">export JAVA_HOME</div><div class="line">export PATH</div><div class="line">export CLASSPATH</div></pre></td></tr></table></figure>
+<p>保存后使之生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source /etc/profile</div></pre></td></tr></table></figure>
+<p>通过</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo $PATH</div></pre></td></tr></table></figure>
+<p>可以查看到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/java/jdk1.7.0_75/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin</div></pre></td></tr></table></figure>
+<p>说明已经设置成功</p>
 
       
     </div>
@@ -387,16 +385,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/11/挑战/" rel="next" title="儿子替我挑战了">
-                <i class="fa fa-chevron-left"></i> 儿子替我挑战了
+              <a href="/2016/09/14/安装mysql/" rel="next" title="安装mysql">
+                <i class="fa fa-chevron-left"></i> 安装mysql
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/09/15/centos6-5安装JAVA/" rel="prev" title="centos6.5安装JAVA">
-                centos6.5安装JAVA <i class="fa fa-chevron-right"></i>
+              <a href="/2016/09/15/centos6-5安装tomcat及优化/" rel="prev" title="centos6.5安装tomcat及优化">
+                centos6.5安装tomcat及优化 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -412,10 +410,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/09/14/安装mysql/"
-     data-title="安装mysql"
+        <div class="ds-share flat" data-thread-key="2016/09/15/centos6-5安装JAVA/"
+     data-title="centos6.5安装JAVA"
      data-content=""
-     data-url="http://wuyujuan.com/2016/09/14/安装mysql/">
+     data-url="http://wuyujuan.com/2016/09/15/centos6-5安装JAVA/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -442,8 +440,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/09/14/安装mysql/"
-           data-title="安装mysql" data-url="http://wuyujuan.com/2016/09/14/安装mysql/">
+      <div class="ds-thread" data-thread-key="2016/09/15/centos6-5安装JAVA/"
+           data-title="centos6.5安装JAVA" data-url="http://wuyujuan.com/2016/09/15/centos6-5安装JAVA/">
       </div>
     
   </div>
@@ -549,7 +547,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#查看是否已有安装"><span class="nav-number">1.</span> <span class="nav-text">查看是否已有安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用yum命令进行mysql的安装"><span class="nav-number">2.</span> <span class="nav-text">使用yum命令进行mysql的安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优化mysql配置"><span class="nav-number">3.</span> <span class="nav-text">优化mysql配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改数据存储目录"><span class="nav-number">4.</span> <span class="nav-text">修改数据存储目录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#卸载自带OpenJDK"><span class="nav-number">1.</span> <span class="nav-text">卸载自带OpenJDK</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装JDK1-7"><span class="nav-number">2.</span> <span class="nav-text">安装JDK1.7</span></a></li></ol></div>
             
           </div>
         </section>

@@ -84,22 +84,34 @@
 
 
 
-<meta name="description" content="查看是否已有安装1rpm -qa | grep mysql　　// 这个命令就会查看该操作系统上是否已经安装了mysql数据库
-通过这个命令查看该系统中是否已经安装了mysql，可以看到我的系统比较干净，没有安装任何版本的mysql,如果你系统有安装，那可以选择进行卸载
-12[root@liang ~]# rpm -e mysql　　// 普通删除模式[root@liang ~]# rpm -e">
+<meta name="description" content="安装tomcat上传压缩包apache-tomcat-7.0.57.tar.gz1https://yunpan.cn/cFesUJdFWgkNr  访问密码 1cb7
+到服务器目录中进行解压
+1tar -xvf apache-tomcat-7.0.57.tar.gz
+1./startup.sh //已经可以成功启动了
+优化tomcat修改JVM参数1vi catalina.sh
+头部增加
+1JAV">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安装mysql">
-<meta property="og:url" content="http://wuyujuan.com/2016/09/14/安装mysql/index.html">
+<meta property="og:title" content="centos6.5安装tomcat及优化">
+<meta property="og:url" content="http://wuyujuan.com/2016/09/15/centos6-5安装tomcat及优化/index.html">
 <meta property="og:site_name" content="梧桐的家">
-<meta property="og:description" content="查看是否已有安装1rpm -qa | grep mysql　　// 这个命令就会查看该操作系统上是否已经安装了mysql数据库
-通过这个命令查看该系统中是否已经安装了mysql，可以看到我的系统比较干净，没有安装任何版本的mysql,如果你系统有安装，那可以选择进行卸载
-12[root@liang ~]# rpm -e mysql　　// 普通删除模式[root@liang ~]# rpm -e">
-<meta property="og:updated_time" content="2016-09-14T15:16:56.000Z">
+<meta property="og:description" content="安装tomcat上传压缩包apache-tomcat-7.0.57.tar.gz1https://yunpan.cn/cFesUJdFWgkNr  访问密码 1cb7
+到服务器目录中进行解压
+1tar -xvf apache-tomcat-7.0.57.tar.gz
+1./startup.sh //已经可以成功启动了
+优化tomcat修改JVM参数1vi catalina.sh
+头部增加
+1JAV">
+<meta property="og:updated_time" content="2016-09-15T02:38:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安装mysql">
-<meta name="twitter:description" content="查看是否已有安装1rpm -qa | grep mysql　　// 这个命令就会查看该操作系统上是否已经安装了mysql数据库
-通过这个命令查看该系统中是否已经安装了mysql，可以看到我的系统比较干净，没有安装任何版本的mysql,如果你系统有安装，那可以选择进行卸载
-12[root@liang ~]# rpm -e mysql　　// 普通删除模式[root@liang ~]# rpm -e">
+<meta name="twitter:title" content="centos6.5安装tomcat及优化">
+<meta name="twitter:description" content="安装tomcat上传压缩包apache-tomcat-7.0.57.tar.gz1https://yunpan.cn/cFesUJdFWgkNr  访问密码 1cb7
+到服务器目录中进行解压
+1tar -xvf apache-tomcat-7.0.57.tar.gz
+1./startup.sh //已经可以成功启动了
+优化tomcat修改JVM参数1vi catalina.sh
+头部增加
+1JAV">
 
 
 
@@ -120,9 +132,9 @@
 
 
 
-  <link rel="canonical" href="http://wuyujuan.com/2016/09/14/安装mysql/"/>
+  <link rel="canonical" href="http://wuyujuan.com/2016/09/15/centos6-5安装tomcat及优化/"/>
 
-  <title> 安装mysql | 梧桐的家 </title>
+  <title> centos6.5安装tomcat及优化 | 梧桐的家 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -252,7 +264,7 @@
             
             
               
-                安装mysql
+                centos6.5安装tomcat及优化
               
             
           </h1>
@@ -264,8 +276,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-09-14T23:16:11+08:00" content="2016-09-14">
-              2016-09-14
+            <time itemprop="dateCreated" datetime="2016-09-15T10:37:11+08:00" content="2016-09-15">
+              2016-09-15
             </time>
           </span>
 
@@ -294,8 +306,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/09/14/安装mysql/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/14/安装mysql/" itemprop="commentsCount"></span>
+                <a href="/2016/09/15/centos6-5安装tomcat及优化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/15/centos6-5安装tomcat及优化/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -323,24 +335,27 @@
       
 
       
-        <h1 id="查看是否已有安装"><a href="#查看是否已有安装" class="headerlink" title="查看是否已有安装"></a>查看是否已有安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -qa | grep mysql　　// 这个命令就会查看该操作系统上是否已经安装了mysql数据库</div></pre></td></tr></table></figure>
-<p>通过这个命令查看该系统中是否已经安装了mysql，可以看到我的系统比较干净，没有安装任何版本的mysql,如果你系统有安装，那可以选择进行卸载</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[root@liang ~]# rpm -e mysql　　// 普通删除模式</div><div class="line">[root@liang ~]# rpm -e --nodeps mysql　　// 强力删除模式，如果使用上面命令删除时，提示有依赖的其它文件，则用该命令可以对其进行强力删除</div></pre></td></tr></table></figure>
-<h1 id="使用yum命令进行mysql的安装"><a href="#使用yum命令进行mysql的安装" class="headerlink" title="使用yum命令进行mysql的安装"></a>使用yum命令进行mysql的安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum list | grep mysql //我们通过命令可以查看yum上提供下载的mysql的版本信息</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install -y mysql-server mysql mysql-deve //然后通过下面的命令进行数据库的安装</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -qi mysql-server //通过以下命令可以查看已安装数据库的版本信息</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service mysqld start //启动</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chkconfig mysqld on //开机启动</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/bin/mysqladmin -u root password &apos;new-password&apos; //设置root密码</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p //登录</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;*****&apos; WITH GRANT OPTION;</div><div class="line">FLUSH PRIVILEGES; //使root账号可以远程登录</div></pre></td></tr></table></figure>
-<h1 id="优化mysql配置"><a href="#优化mysql配置" class="headerlink" title="优化mysql配置"></a>优化mysql配置</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">[mysqld]</div><div class="line">datadir=/var/lib/mysql</div><div class="line">socket=/var/lib/mysql/mysql.sock</div><div class="line">user=mysql</div><div class="line"># Disabling symbolic-links is recommended to prevent assorted security risks</div><div class="line">symbolic-links=0</div><div class="line"></div><div class="line"></div><div class="line">innodb_buffer_pool_size=6G</div><div class="line">max_connections=1024</div><div class="line">table_open_cache=128</div><div class="line">max_allowed_packet=4M</div><div class="line">query_cache_size=8M</div><div class="line">slow_query_log=1</div><div class="line">long_query_time=1</div><div class="line">slow_query_log_file=/mnt/mysqldisk/logs/mysql-slow.log</div><div class="line">default-storage-engine=InnoDB</div><div class="line"></div><div class="line">[mysqld_safe]</div><div class="line">log-error=/mnt/mysqldisk/logs/mysqld.log</div><div class="line">pid-file=/var/run/mysqld/mysqld.pid</div></pre></td></tr></table></figure>
-<p>重启mysqld服务，正常启动，但查看日志有一条错误信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">160914 22:55:39 [ERROR] Could not use /mnt/mysqldisk/logs/mysql-slow.log for logging (error 13). Turning logging off for the whole duration o</div><div class="line">f the MySQL server process. To turn it on again: fix the cause, shutdown the MySQL server and restart it.</div></pre></td></tr></table></figure>
-<p>mysql账户无此文件操作权限所导致</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">touch mysql-slow.log</div><div class="line">chown mysql mysql-slow.log</div></pre></td></tr></table></figure>
-<p>重启mysqld成功！</p>
-<h1 id="修改数据存储目录"><a href="#修改数据存储目录" class="headerlink" title="修改数据存储目录"></a>修改数据存储目录</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cp -R /var/lib/mysql/* .</div><div class="line">chown mysql -R data/</div><div class="line">datadir=/mnt/mysqldisk/data //修改my.cnf</div></pre></td></tr></table></figure>
+        <h1 id="安装tomcat"><a href="#安装tomcat" class="headerlink" title="安装tomcat"></a>安装tomcat</h1><p>上传压缩包apache-tomcat-7.0.57.tar.gz<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://yunpan.cn/cFesUJdFWgkNr  访问密码 1cb7</div></pre></td></tr></table></figure></p>
+<p>到服务器目录中进行解压</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -xvf apache-tomcat-7.0.57.tar.gz</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./startup.sh //已经可以成功启动了</div></pre></td></tr></table></figure>
+<h1 id="优化tomcat"><a href="#优化tomcat" class="headerlink" title="优化tomcat"></a>优化tomcat</h1><h2 id="修改JVM参数"><a href="#修改JVM参数" class="headerlink" title="修改JVM参数"></a>修改JVM参数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi catalina.sh</div></pre></td></tr></table></figure>
+<p>头部增加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;-server -Xms1024m -Xmx2048m -XX:PermSize=1024M -XX:MaxPermSize=2048m&quot;</div></pre></td></tr></table></figure>
+<h2 id="配置UTF-8"><a href="#配置UTF-8" class="headerlink" title="配置UTF-8"></a>配置UTF-8</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;Connector port=&quot;80&quot; protocol=&quot;HTTP/1.1&quot;</div><div class="line">               connectionTimeout=&quot;20000&quot;</div><div class="line">               redirectPort=&quot;8443&quot; URIEncoding=&quot;UTF-8&quot; /&gt;</div></pre></td></tr></table></figure>
+<h2 id="优化IO模式"><a href="#优化IO模式" class="headerlink" title="优化IO模式"></a>优化IO模式</h2><p>修改AJP为NIO,将原配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</div></pre></td></tr></table></figure>
+<p>改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;Connector port=&quot;8009&quot; protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;</div><div class="line"></div><div class="line">connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot;  URIEncoding=&quot;UTF-8&quot; maxThreads=&quot;1000&quot; minSpareThreads=&quot;100&quot; maxSpareThreads=&quot;500&quot; acceptCount=</div><div class="line">&quot;700&quot;/&gt;</div></pre></td></tr></table></figure>
+<p>增加HOST节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot; unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot; xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</div><div class="line"></div><div class="line">&lt;Context path=&quot;&quot; docBase=&quot;/mnt/app/item/item-web&quot;  reloadable=&quot;true&quot; debug=&quot;0&quot;&gt;</div><div class="line"></div><div class="line">&lt;/Context&gt;</div><div class="line">&lt;Alias&gt;www.kingsdf.com&lt;/Alias&gt;</div><div class="line">&lt;Alias&gt;kingsdf.cn&lt;/Alias&gt;</div><div class="line">&lt;Alias&gt;www.kingsdf.cn&lt;/Alias&gt;</div><div class="line"></div><div class="line">&lt;/Host&gt;</div></pre></td></tr></table></figure>
+<h1 id="发生的错误"><a href="#发生的错误" class="headerlink" title="发生的错误"></a>发生的错误</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>Tomcat7在启动时报错，详细信息如下：<br><a id="more"></a><br>十一月 23, 2013 7:21:58 下午 org.apache.catalina.core.StandardContext startInter<br>nal<br>严重: Error filterStart<br>十一月 23, 2013 7:21:58 下午 org.apache.catalina.core.StandardContext startInter<br>nal<br>严重: Context [/st] startup failed due to previous errors</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>Tomcat后台信息太少以至于不能得出问题空间出在哪儿（Tomcat的日志目录也无相关信息）。网上查询得知，通过配置Tomcat的Log，让它记录更多的日志信息，方能进一步分析原因。</p>
+<p>在不能启动的Web应用目录（我这里是st）下WEB-INF/classes目录中，新建logging.properties文件，内容参考如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">handlers = org.apache.juli.FileHandler, java.util.logging.ConsoleHandler</div><div class="line"></div><div class="line">############################################################</div><div class="line"># Handler specific properties.</div><div class="line"># Describes specific configuration info for Handlers.</div><div class="line">############################################################</div><div class="line"></div><div class="line">org.apache.juli.FileHandler.level = FINE</div><div class="line">org.apache.juli.FileHandler.directory = $&#123;catalina.base&#125;/logs</div><div class="line">org.apache.juli.FileHandler.prefix = error-debug.</div><div class="line"></div><div class="line">java.util.logging.ConsoleHandler.level = FINE</div><div class="line">java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter</div></pre></td></tr></table></figure>
+<p>再启动发现了本次的错误</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">org.springframework.beans.factory.BeanCreationException: Error creating bean with name &apos;grailsApplication&apos; defined in ServletContext</div><div class="line"> resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is java.lang.ExceptionInInitializerError        at java.util.concurrent.FutureTask.run(FutureTask.java:262)</div><div class="line">        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)</div><div class="line">        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)</div><div class="line">        at java.lang.Thread.run(Thread.java:745)</div><div class="line">Caused by: java.lang.ExceptionInInitializerError</div><div class="line">        at java.lang.Class.forName(Class.java:274)</div><div class="line">        at ship.ImageController.&lt;clinit&gt;(ImageController.groovy:27)</div><div class="line">        at java.lang.Class.forName(Class.java:274)</div><div class="line">        ... 4 more</div><div class="line">Caused by: java.lang.IllegalArgumentException: Malformed \uxxxx encoding.</div><div class="line">        at java.util.Properties.loadConvert(Properties.java:568)</div><div class="line">        at java.util.Properties.load0(Properties.java:391)</div><div class="line">        at java.util.Properties.load(Properties.java:341)</div><div class="line">        at util.SysPropertUtil.&lt;clinit&gt;(SysPropertUtil.groovy:15)</div><div class="line">        ... 7 more</div></pre></td></tr></table></figure>
+<p>配置文件中字符错误，这是发生在window下的文件复制到linux中，知道问题就好修改了。</p>
 
       
     </div>
@@ -387,17 +402,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/09/11/挑战/" rel="next" title="儿子替我挑战了">
-                <i class="fa fa-chevron-left"></i> 儿子替我挑战了
+              <a href="/2016/09/15/centos6-5安装JAVA/" rel="next" title="centos6.5安装JAVA">
+                <i class="fa fa-chevron-left"></i> centos6.5安装JAVA
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/15/centos6-5安装JAVA/" rel="prev" title="centos6.5安装JAVA">
-                centos6.5安装JAVA <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -412,10 +423,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/09/14/安装mysql/"
-     data-title="安装mysql"
+        <div class="ds-share flat" data-thread-key="2016/09/15/centos6-5安装tomcat及优化/"
+     data-title="centos6.5安装tomcat及优化"
      data-content=""
-     data-url="http://wuyujuan.com/2016/09/14/安装mysql/">
+     data-url="http://wuyujuan.com/2016/09/15/centos6-5安装tomcat及优化/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -442,8 +453,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/09/14/安装mysql/"
-           data-title="安装mysql" data-url="http://wuyujuan.com/2016/09/14/安装mysql/">
+      <div class="ds-thread" data-thread-key="2016/09/15/centos6-5安装tomcat及优化/"
+           data-title="centos6.5安装tomcat及优化" data-url="http://wuyujuan.com/2016/09/15/centos6-5安装tomcat及优化/">
       </div>
     
   </div>
@@ -549,7 +560,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#查看是否已有安装"><span class="nav-number">1.</span> <span class="nav-text">查看是否已有安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用yum命令进行mysql的安装"><span class="nav-number">2.</span> <span class="nav-text">使用yum命令进行mysql的安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优化mysql配置"><span class="nav-number">3.</span> <span class="nav-text">优化mysql配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改数据存储目录"><span class="nav-number">4.</span> <span class="nav-text">修改数据存储目录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装tomcat"><span class="nav-number">1.</span> <span class="nav-text">安装tomcat</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优化tomcat"><span class="nav-number">2.</span> <span class="nav-text">优化tomcat</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#修改JVM参数"><span class="nav-number">2.1.</span> <span class="nav-text">修改JVM参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置UTF-8"><span class="nav-number">2.2.</span> <span class="nav-text">配置UTF-8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化IO模式"><span class="nav-number">2.3.</span> <span class="nav-text">优化IO模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#发生的错误"><span class="nav-number">3.</span> <span class="nav-text">发生的错误</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">3.1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析"><span class="nav-number">3.2.</span> <span class="nav-text">分析</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

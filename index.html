@@ -248,6 +248,277 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/15/centos6-5安装tomcat及优化/" itemprop="url">
+                  centos6.5安装tomcat及优化
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-15T10:37:11+08:00" content="2016-09-15">
+              2016-09-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/炽热的工作/" itemprop="url" rel="index">
+                    <span itemprop="name">炽热的工作</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/15/centos6-5安装tomcat及优化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/15/centos6-5安装tomcat及优化/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="安装tomcat"><a href="#安装tomcat" class="headerlink" title="安装tomcat"></a>安装tomcat</h1><p>上传压缩包apache-tomcat-7.0.57.tar.gz<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://yunpan.cn/cFesUJdFWgkNr  访问密码 1cb7</div></pre></td></tr></table></figure></p>
+<p>到服务器目录中进行解压</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -xvf apache-tomcat-7.0.57.tar.gz</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">./startup.sh //已经可以成功启动了</div></pre></td></tr></table></figure>
+<h1 id="优化tomcat"><a href="#优化tomcat" class="headerlink" title="优化tomcat"></a>优化tomcat</h1><h2 id="修改JVM参数"><a href="#修改JVM参数" class="headerlink" title="修改JVM参数"></a>修改JVM参数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi catalina.sh</div></pre></td></tr></table></figure>
+<p>头部增加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;-server -Xms1024m -Xmx2048m -XX:PermSize=1024M -XX:MaxPermSize=2048m&quot;</div></pre></td></tr></table></figure>
+<h2 id="配置UTF-8"><a href="#配置UTF-8" class="headerlink" title="配置UTF-8"></a>配置UTF-8</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;Connector port=&quot;80&quot; protocol=&quot;HTTP/1.1&quot;</div><div class="line">               connectionTimeout=&quot;20000&quot;</div><div class="line">               redirectPort=&quot;8443&quot; URIEncoding=&quot;UTF-8&quot; /&gt;</div></pre></td></tr></table></figure>
+<h2 id="优化IO模式"><a href="#优化IO模式" class="headerlink" title="优化IO模式"></a>优化IO模式</h2><p>修改AJP为NIO,将原配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;Connector port=&quot;8009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;8443&quot; /&gt;</div></pre></td></tr></table></figure>
+<p>改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;Connector port=&quot;8009&quot; protocol=&quot;org.apache.coyote.http11.Http11NioProtocol&quot;</div><div class="line"></div><div class="line">connectionTimeout=&quot;20000&quot; redirectPort=&quot;8443&quot;  URIEncoding=&quot;UTF-8&quot; maxThreads=&quot;1000&quot; minSpareThreads=&quot;100&quot; maxSpareThreads=&quot;500&quot; acceptCount=</div><div class="line">&quot;700&quot;/&gt;</div></pre></td></tr></table></figure>
+<p>增加HOST节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot; unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot; xmlValidation=&quot;false&quot; xmlNamespaceAware=&quot;false&quot;&gt;</div><div class="line"></div><div class="line">&lt;Context path=&quot;&quot; docBase=&quot;/mnt/app/item/item-web&quot;  reloadable=&quot;true&quot; debug=&quot;0&quot;&gt;</div><div class="line"></div><div class="line">&lt;/Context&gt;</div><div class="line">&lt;Alias&gt;www.kingsdf.com&lt;/Alias&gt;</div><div class="line">&lt;Alias&gt;kingsdf.cn&lt;/Alias&gt;</div><div class="line">&lt;Alias&gt;www.kingsdf.cn&lt;/Alias&gt;</div><div class="line"></div><div class="line">&lt;/Host&gt;</div></pre></td></tr></table></figure>
+<h1 id="发生的错误"><a href="#发生的错误" class="headerlink" title="发生的错误"></a>发生的错误</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>Tomcat7在启动时报错，详细信息如下：<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/09/15/centos6-5安装tomcat及优化/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/15/centos6-5安装JAVA/" itemprop="url">
+                  centos6.5安装JAVA
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-15T10:33:40+08:00" content="2016-09-15">
+              2016-09-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/炽热的工作/" itemprop="url" rel="index">
+                    <span itemprop="name">炽热的工作</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/15/centos6-5安装JAVA/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/15/centos6-5安装JAVA/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="卸载自带OpenJDK"><a href="#卸载自带OpenJDK" class="headerlink" title="卸载自带OpenJDK"></a>卸载自带OpenJDK</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">jdk rpm -qa | grep java</div><div class="line">jdk yum -y remove java //删除原装</div><div class="line">jdk yum -y remove java-1.7.0* //删除原装</div><div class="line">jdk yum -y remove tzdata-java-2012* //删除原装</div></pre></td></tr></table></figure>
+<h1 id="安装JDK1-7"><a href="#安装JDK1-7" class="headerlink" title="安装JDK1.7"></a>安装JDK1.7</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://yunpan.cn/cFesUTHRD9qJF  访问密码 fdaa</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -ivh jdk-7u79-linux-x64.rpm</div></pre></td></tr></table></figure>
+<p>此时使用命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -version</div></pre></td></tr></table></figure>
+<p>已经可以看到JDK正常安装了，但最好还是加入到环境变量中，以便对此有依赖的组件可以更安全的找到JAVA环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/profile</div></pre></td></tr></table></figure>
+<p>在文件末加入以下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">JAVA_HOME=/usr/java/jdk1.7.0_79</div><div class="line">PATH=$JAVA_HOME/bin:$PATH</div><div class="line">CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</div><div class="line">export JAVA_HOME</div><div class="line">export PATH</div><div class="line">export CLASSPATH</div></pre></td></tr></table></figure>
+<p>保存后使之生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source /etc/profile</div></pre></td></tr></table></figure>
+<p>通过</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">echo $PATH</div></pre></td></tr></table></figure>
+<p>可以查看到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/java/jdk1.7.0_75/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin</div></pre></td></tr></table></figure>
+<p>说明已经设置成功</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/14/安装mysql/" itemprop="url">
                   安装mysql
                 </a>
@@ -607,271 +878,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/31/mysql数据库故障/" itemprop="url">
-                  mysql数据库故障
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-31T11:50:09+08:00" content="2016-08-31">
-              2016-08-31
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/炽热的工作/" itemprop="url" rel="index">
-                    <span itemprop="name">炽热的工作</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/31/mysql数据库故障/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/31/mysql数据库故障/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="is-marked-as-crashed-and-should-be-repaired"><a href="#is-marked-as-crashed-and-should-be-repaired" class="headerlink" title="is marked as crashed and should be repaired"></a>is marked as crashed and should be repaired</h1><p>错误产生原因，有网友说是频繁查询和更新表造成的索引错误。</p>
-<p>还有说法为是MYSQL数据库因为某种原因而受到了损坏，如：数据库服务器突发性的断电、在提在数据库表提供服务时对表的原文件进行某种操作都有可能导致MYSQL数据库表被损坏而无法读取数据。</p>
-<p>总之就是因为某些不可测的问题造成表的损坏。</p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/1.png" alt="image"></p>
-<p>下面讲的方法只对MyISAM格式的表有效:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">REPAIR TABLE statement(mysql服务必须处于运行状态)。</div><div class="line">mysqlcheck(mysql服务可以处于运行状态)。</div><div class="line">myisamchk(必须停掉mysql服务,或者所操作的表处于不活动状态)。</div></pre></td></tr></table></figure>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/2.png" alt="image"></p>
-<p>由于先执行的上面这步修复，发现系统还是出错。仔细分析，原来myisamchk需要必停掉服务运行。于是，再尝试执行下面的命令，修复成功！</p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/3.png" alt="image"></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/26/挂载硬盘/" itemprop="url">
-                  挂载硬盘
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-26T12:20:08+08:00" content="2016-08-26">
-              2016-08-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/炽热的工作/" itemprop="url" rel="index">
-                    <span itemprop="name">炽热的工作</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/26/挂载硬盘/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/26/挂载硬盘/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="查看新硬盘"><a href="#查看新硬盘" class="headerlink" title="查看新硬盘"></a>查看新硬盘</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">#fdisk –l</div></pre></td></tr></table></figure>
-<p>新添加的硬盘的编号为/dev/sdb</p>
-<h1 id="挂载硬盘"><a href="#挂载硬盘" class="headerlink" title="挂载硬盘"></a>挂载硬盘</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fdisk /dev/sdb</div></pre></td></tr></table></figure>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="image"></p>
-<p>选择”n”添加一个新卷</p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%872.png" alt="image"></p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%873.png" alt="image"></p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%874.png" alt="image"></p>
-<p>选择”w”开始写入</p>
-<p><img src="http://7xt4qe.com1.z0.glb.clouddn.com/%E5%9B%BE%E7%89%875.png" alt="image"></p>
-<p>对新加入卷sdb1，进行格式化文件格式ext4<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/26/挂载硬盘/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -912,7 +923,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">14</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
